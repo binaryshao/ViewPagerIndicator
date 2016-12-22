@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     void initViewPager() {
         int[] colors = {Color.CYAN, Color.LTGRAY};
         vpIndicator.setPageCount(4);
-        vpIndicator.setColors(colors);
+//        vpIndicator.setColors(colors);
         viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(), createFragments()));
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
