@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/item1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="页面1"
+            android:textColor="@drawable/title_selector"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/item2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="页面2"
+            android:textColor="@drawable/title_selector"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/item3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="页面3"
+            android:textColor="@drawable/title_selector"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/item4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="页面4"
+            android:textColor="@drawable/title_selector"
+            android:textSize="12sp"/>
+    </RadioGroup>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/radio_group"
+        android:background="#BFBFBF"/>
+
+    <sbingo.com.mylibrary.ViewPagerIndicator
+        android:id="@+id/vp_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/line"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/vp_indicator"
+        android:layout_gravity="center"/>
+
+</RelativeLayout>
