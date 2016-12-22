@@ -49,6 +49,9 @@ compile 'com.github.Sbingo:ViewPagerIndicator:1.0.0'
                             viewPager.setCurrentItem(0);
                         }
                         break;
+			  	......
+			  	......
+			  	......
                     default:
                 }
             }
