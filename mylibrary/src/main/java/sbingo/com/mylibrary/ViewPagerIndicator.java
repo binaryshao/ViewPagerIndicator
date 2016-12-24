@@ -103,7 +103,7 @@ public class ViewPagerIndicator extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (pageCount <= 1) {
+        if (pageCount < 1) {
             throw new RuntimeException("ViewPagerIndicator_非法页数！");
         }
         if (isIdle) {
