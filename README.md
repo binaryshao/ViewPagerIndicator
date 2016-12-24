@@ -22,7 +22,7 @@ allprojects {
 
  - 在要使用的模块中添加依赖：
 ```
-compile 'com.github.Sbingo:ViewPagerIndicator:1.0.0'
+compile 'com.github.Sbingo:ViewPagerIndicator:2.0.0'
 ```
  
  - 在布局中使用:
