@@ -153,9 +153,14 @@ public class ViewPagerIndicator extends View {
     }
 
     public void drawPoint(int position, float percentX) {
+        //实时更新计算基准
+        //往回滑动时，计算基准减一个单位
         if (position < currentPageIndex) {
             currentStartX = startX + (currentPageIndex - 1) * getWidth() / pageCount;
+        } else { //往后滑动时，计算基准不变
+            currentStartX = startX + currentPageIndex* getWidth() / pageCount;
         }
+        //防止滑动停止时出现绘制在起点的问题
         if (mPercentX > 0.9 && percentX == 0) {
             return;
         }

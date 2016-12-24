@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (checkedId) {
                     case R.id.item1:
                         if (viewPager.getCurrentItem() != 0) {
-                            fromRadioGroup = true;
+                            fromRadioGroup = true; //防止直接点击tab时，会一路调用"onPageScrolled"，造成绘制效果不好，目前只能这样控制……
                             viewPager.setCurrentItem(0);
                         }
                         break;
@@ -93,15 +93,15 @@ public class MainActivity extends AppCompatActivity {
 
     void initViewPager() {
         int[] colors = {Color.CYAN, Color.LTGRAY};
+//        vpIndicator.setColors(colors);//可以设置喜欢的颜色，但每次也是随机的：
         vpIndicator.setPageCount(4);
-//        vpIndicator.setColors(colors);
         viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(), createFragments()));
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 Log.d("onPageScrolled", "position =" + position + " \n offset =" + positionOffset);
                 if (!fromRadioGroup) {
-                    vpIndicator.drawPoint(position,positionOffset);
+                    vpIndicator.drawPoint(position,positionOffset); //第二步：滑动时绘制圆点
                 }
             }
 
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case ViewPager.SCROLL_STATE_IDLE:
                         Log.d("onPageScrollStateChanged", "SCROLL_STATE_IDLE");
-                        vpIndicator.setCurrentPageIndex(currentIndex);
+                        vpIndicator.setCurrentPageIndex(currentIndex); //第三步：停止时绘制圆点
                         fromRadioGroup = false;
                         break;
                     case ViewPager.SCROLL_STATE_SETTLING:
