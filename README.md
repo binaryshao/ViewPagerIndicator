@@ -2,13 +2,13 @@ demo演示：
 
 ![](https://github.com/Sbingo/ViewPagerIndicator/raw/master/gif/ViewPagerIndicator.gif) 
 
-###**库描述**
+### 库描述
 
  1. 配合ViewPager使用的圆点指示器，每滑到另一页并停止时，随机改变圆点颜色，内置了5种颜色.
  
  2. 如果页面没变，停止时颜色不会改变，圆点的颜色也可以自行设置.
  
-###**使用方法**
+### 使用方法
 
  - 在项目根 build.gradle 添加：
 ```
@@ -92,5 +92,13 @@ compile 'com.github.Sbingo:ViewPagerIndicator:2.0.0'
 ```
 
 
-如果感觉不错，不妨顺手点个 Star吧, 谢啦~
+如果感觉不错，不妨顺手点个 Star 吧, 谢啦~
+
+### 公众号
+扫描下方二维码，关注我的公众号 
+
+分享各种知识、干货，给自己多一扇看世界的窗
+    
+          as彬哥六六六
+![as彬哥六六六](https://s2.ax1x.com/2019/03/22/A8dPfA.jpg)
 
