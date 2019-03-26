@@ -95,5 +95,5 @@ compile 'com.github.Sbingo:ViewPagerIndicator:2.0.0'
 如果感觉不错，不妨顺手点个 Star 吧, 谢啦~
 
 ### 公众号
-![as彬哥六六六](https://s2.ax1x.com/2019/03/26/AUooOs.jpg)
+![as彬哥六六六](https://s2.ax1x.com/2019/03/26/AUooOs.md.jpg)
 
